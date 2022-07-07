@@ -1,0 +1,60 @@
+article {
+  background-color: #dde5ec;
+  color: black;
+  aside {
+    text-align: center;
+    max-width: 100%;
+    h2 {
+      font-size: $h2;
+      padding: 4% 0 2% 0;
+    }
+    p {
+      margin: 0.4rem auto;
+      font-size: $p2;
+      max-width: 90%;
+      margin-bottom: 12%;
+    }
+    #about-image {
+      background-image: url(../assets/images/mobile-distant.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 15em;
+      min-height: 20em;
+      @media (min-width: $bp-phone-1) {
+        margin-top: -3%;
+      }
+      @media (min-width: $bp-phone) {
+        height: 25em;
+        min-height: 31em;
+        margin-top: -5%;
+      }
+      @media (min-width: $bp-tablet) {
+        background-image: url(../assets/images/tablet-distant.png);
+        margin-top: -10%;
+      }
+      @media (min-width: 950px) {
+        background-size: contain;
+      }
+      @media (min-width: 1300px) {
+        background-image: url(../assets/images/pc-version.png);
+      }
+      @media (min-width: $bp-tv) {
+        background-image: url(../assets/images/pc-distant.png);
+        // height: 25em;
+        // min-height: 31em;
+        // margin-top: -5%;
+      }
+    }
+  }
+}
+
+.intro {
+  transform: translateY(-24%);
+  transition: all 700ms ease-in-out;
+}
+.intro.active {
+  transform: translateY(0px);
+  opacity: 1;
+}

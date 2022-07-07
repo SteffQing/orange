@@ -1,0 +1,93 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-column-gap: 20%;
+  justify-items: stretch;
+  align-items: center;
+  // background-color: currentColor;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding: 1em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  .logo {
+    background-image: url(../assets/images/logo.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 13em;
+    max-width: 70%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .start {
+    font-size: $h2;
+    text-align: right;
+    color: purple;
+    padding-right: 1em;
+  }
+  ul {
+    display: none;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  nav {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 10%;
+    justify-items: stretch;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: transparent;
+    // box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    // backdrop-filter: blur(9.5px);
+    // -webkit-backdrop-filter: blur(9.5px);
+    .logo {
+      background-image: url(../assets/images/logo.png);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 13em;
+      max-width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      @media (min-width: $bp-tablet) {
+        width: 50%;
+        margin-left: 1em;
+      }
+    }
+    .start {
+      display: none;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 3%;
+      grid-row-gap: 0%;
+      justify-items: stretch;
+      align-items: center;
+      height: 4rem;
+      // background: rgba(255, 255, 255, 0.36);
+      // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      // backdrop-filter: blur(9.5px);
+      // -webkit-backdrop-filter: blur(9.5px);
+      padding: 0 5em;
+      border-bottom-left-radius: 5px;
+    }
+    li {
+      list-style: none;
+      font-size: $p;
+      font-family: "robotoregular";
+      color: #e174b7;
+      a:link {
+        color: #e174b7;
+      }
+    }
+  }
+}

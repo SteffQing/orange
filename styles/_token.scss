@@ -1,0 +1,34 @@
+#token {
+  background-color: black;
+  text-align: center;
+  margin: 4em 0;
+  h3 {
+    color: white;
+    font-size: $p;
+    padding: 0.4em;
+    max-width: 60ch;
+    margin: 0 auto -2.6em auto;
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+    font-family: "robotoregular";
+  }
+  .token_utilities {
+    width: 100%;
+    margin: 5% auto;
+    display: flex;
+    @media (max-width: 373px) {
+      height: 36em;
+      position: relative;
+      transform: scale(0.7);
+    }
+    img {
+      margin: 0 auto;
+      @media (max-width: 373px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
