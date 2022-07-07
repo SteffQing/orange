@@ -1,0 +1,50 @@
+.bottomMenu {
+  position: fixed;
+  bottom: 20px;
+  width: 2%;
+  right: 10px;
+  height: 30px;
+  border: 0;
+  background: none;
+  border-radius: 100%;
+  z-index: 1;
+  transition: all 1s;
+}
+.hide {
+  opacity: 0;
+  right: -100%;
+}
+.show {
+  opacity: 1;
+  width: 30px;
+  @media (max-width: 540px) {
+    width: 30px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    height: 30px;
+    background-color: none;
+  }
+  background-image: url(../assets/svg/uparrow.svg);
+  right: 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.show:hover {
+  box-shadow: 2px 2px 3px gray;
+  animation: jump 3s ease-in 1 forwards;
+}
+
+@keyframes jump {
+  10% {
+    transform: translateY(20px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+}

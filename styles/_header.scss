@@ -81,24 +81,32 @@ main {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             white-space: nowrap;
+            font-family: "planet_gamersregular";
           }
         }
       }
       p {
         font-size: $p2;
-        color: $textSec;
+        color: #4bcfe5;
         font-family: "robotoregular";
         line-height: 1.32;
       }
       button {
-        background-color: $textSec;
-        color: #000;
+        background-image: url(../assets/svg/downarrow.svg);
+        border: 0;
         margin: 1em 0;
-        border-radius: 7px;
+        height: 30px;
+        background-repeat: no-repeat;
         padding: 0.4em 2em;
-        font-size: $p2;
+        font-size: $button;
         font-family: "robotoblack";
         cursor: pointer;
+        animation: jump 4s ease-in 4 forwards;
+        background-color: transparent;
+        border-radius: 100%;
+        &:hover {
+          box-shadow: 2px 2px 3px gray;
+        }
       }
     }
     .hero_image {
@@ -151,5 +159,20 @@ main {
 
   to {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes jump {
+  10% {
+    transform: translateY(20px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(0px);
   }
 }
