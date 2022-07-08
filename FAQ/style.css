@@ -72,16 +72,18 @@ h2 {
   letter-spacing: 1px;
   padding: 5px 0px;
 }
-
+.doc {
+  margin: 20px auto;
+  display: table;
+}
 .docs {
-  margin-bottom: 20px;
   padding: 10px 30px;
   border-radius: 5px;
+  background-color: black;
   text-align: center;
-  color: dimgray;
+  color: dimgray !important;
   font-size: 20px;
   transition: color 500ms ease-in-out;
-  white-space: no-wrap;
 }
 
 .docs:hover {
@@ -105,9 +107,6 @@ footer .container h2 {
     height: 0;
     overflow: hidden;
     transition: all 1s;
-  }
-  .docs {
-    padding: 0;
   }
 }
 @media only screen and (min-width: 770px) {
