@@ -90,9 +90,12 @@ main {
       }
       p {
         font-size: $p2;
-        color: #4bcfe5;
+        color: white;
         font-family: "robotoregular";
         line-height: 1.32;
+        .blue {
+          color: #4bcfe5;
+        }
       }
       button {
         background-image: url(../assets/svg/downarrow.svg);
