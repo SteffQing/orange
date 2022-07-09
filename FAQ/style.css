@@ -81,7 +81,7 @@ h2 {
   border-radius: 5px;
   background-color: black;
   text-align: center;
-  color: dimgray !important;
+  color: #dde5ec !important;
   font-size: 20px;
   transition: color 500ms ease-in-out;
 }

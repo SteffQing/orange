@@ -30,7 +30,9 @@ main {
       }
     }
     @media (min-width: $bp-pc) {
-      height: 100vh;
+      @media (max-height: 700px) {
+        height: 100vh;
+      }
     }
     .hero {
       width: 90%;
@@ -78,6 +80,7 @@ main {
               var(--purple)
             );
             background-size: 200%;
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             white-space: nowrap;
@@ -114,18 +117,12 @@ main {
       max-width: 100%;
       height: 40rem;
       max-height: 60%;
-      background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_667.png);
-      background-size: cover;
+      background-image: url(../assets/images/hero_image.png);
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       @media (min-width: $bp-phone-1) {
         max-height: 100%;
-      }
-      @media (min-width: $bp-tablet-1) {
-        background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_477.png);
-      }
-      @media (min-width: $bp-tablet) {
-        background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_904.png);
       }
     }
   }
