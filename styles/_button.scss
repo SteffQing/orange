@@ -30,21 +30,14 @@
   background-repeat: no-repeat;
 }
 .show:hover {
-  box-shadow: 2px 2px 3px gray;
-  animation: jump 3s ease-in 1 forwards;
+  animation: jump 2s ease-in 1 forwards;
 }
 
 @keyframes jump {
-  10% {
+  30% {
     transform: translateY(20px);
   }
-  40% {
-    transform: translateY(0px);
-  }
-  70% {
-    transform: translateY(20px);
-  }
-  90% {
+  65% {
     transform: translateY(0px);
   }
 }
