@@ -38,6 +38,7 @@ footer {
         font-size: $p;
         margin: 5%;
         font-family: "robotolight_italic";
+
         a:link {
           text-decoration: none;
           color: gray;
@@ -99,4 +100,7 @@ footer {
     text-align: center;
     padding: 1em;
   }
+}
+.cross {
+  text-decoration: line-through;
 }

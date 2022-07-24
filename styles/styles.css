@@ -1407,4 +1407,8 @@ footer .hr .copyright:after {
 footer p {
   text-align: center;
   padding: 1em;
+}
+
+.cross {
+  text-decoration: line-through;
 }/*# sourceMappingURL=styles.css.map */
