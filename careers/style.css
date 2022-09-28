@@ -190,12 +190,13 @@ nav{
   display:grid;
   gap:60px;
   margin-bottom: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 350px));
 }
 .available-positions{
   /* margin:auto; */
   /* border:3px solid orange; */
   height:400px;
+  margin:20px;
   padding-top:15px;
   box-sizing: content-box;
   background: rgb(250, 241, 241);
@@ -216,11 +217,11 @@ nav{
   padding:10px;
   font-size: 20px;
   font-weight: bolder;
-  width:39%;
+  width:45%;
   margin:auto;
   position: absolute;
   bottom:10px;
-  left:33%;
+  left:30%;
   transition: all 1s;
   background: white;
   /* box-shadow: -6px -6px 4px rgb(199, 133, 11); */
