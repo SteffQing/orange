@@ -1,0 +1,182 @@
+@mixin flexcontent {
+  display: flex;
+  border: 0.4px solid rgb(47, 192, 219);
+  padding: 1.5em;
+  line-height: 2;
+  box-shadow: 16.7px 16.7px 2.2px rgba(0, 0, 0, 0.002),
+    27.6px 27.6px 5.3px rgba(0, 0, 0, 0.007),
+    36.2px 36.2px 10px rgba(0, 0, 0, 0.048),
+    45.2px 45.2px 17.9px rgba(0, 0, 0, 0.065),
+    59px 59px 33.4px rgba(158, 37, 37, 0.069),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  flex-direction: column;
+  color: white;
+  height: fit-content;
+  border-radius: 7px;
+  background-color: #1f1f24;
+}
+@mixin img($image) {
+  background-image: url($image);
+  background-position: center center;
+  background-size: contain;
+  width: 100%;
+  order: 2;
+  background-repeat: no-repeat;
+  padding: 15em;
+}
+@mixin h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(47, 192, 219);
+  font-size: $h2;
+  text-align: center;
+  font-family: "robotoblack";
+}
+@mixin description {
+  order: 1;
+  text-align: justify;
+  font-size: $p;
+  width: 100%;
+  font-family: "robotoregular";
+}
+@mixin media {
+  @media (max-width: 340px) {
+    padding: 10em;
+  }
+}
+@mixin order {
+  order: 1;
+}
+
+#products {
+  width: 100%;
+  background-color: black;
+  h2 {
+    text-align: center;
+    font-size: $h1;
+    padding: 2.8rem;
+    color: white;
+    font-family: "robotobold";
+  }
+  .grid-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    margin: 0 5%;
+    @media (min-width: $bp-tablet) {
+      margin: 0 3%;
+    }
+    @media (min-width: $bp-pc) {
+      margin: 0 1%;
+    }
+    .marketplace,
+    .lending,
+    .game-guild,
+    .launchpad,
+    .bridge {
+      margin: 4% auto;
+      width: min(100%, 700px);
+      transition: all 500ms ease-in-out;
+      @media (min-width: $bp-tablet) {
+        margin: 2% auto;
+      }
+      @media (min-width: $bp-pc) {
+        margin: 1% auto;
+      }
+      @include flexcontent();
+      .description {
+        height: 0;
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+      }
+      .img {
+        @include img("../assets/images/marketplace.png");
+        @include media();
+      }
+      &:hover {
+        .description {
+          height: 100%;
+          opacity: 1;
+          @include description();
+          @media (min-width: $bp-tablet) {
+            text-align: left;
+          }
+          p {
+            margin: 0 auto;
+            width: min(100%, 550px);
+          }
+        }
+      }
+    }
+    .lending {
+      .img {
+        @include img("../assets/images/lending.png");
+        @include media();
+      }
+    }
+    .game-guild {
+      .img {
+        @include img("../assets/images/game-guild.png");
+        @include media();
+      }
+    }
+    .launchpad {
+      .img {
+        @include img("../assets/images/launchpad.png");
+        @include media();
+      }
+    }
+    .bridge {
+      .img {
+        @include img("../assets/images/bridge.png");
+        @include media();
+      }
+    }
+    h3 {
+      @include h3();
+    }
+  }
+}
+
+.marketplace {
+  transform: translateY(4%);
+  transition: all 400ms ease-in-out;
+}
+.marketplace.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.lending {
+  transform: translateY(4%);
+  transition: all 400ms ease-in-out;
+}
+.lending.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.bridge {
+  transform: translateY(4%);
+  transition: all 400ms ease-in-out;
+}
+.bridge.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.game-guild {
+  transform: translateY(4%);
+  transition: all 400ms ease-in-out;
+}
+.game-guild.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.launchpad {
+  transform: translateY(4%);
+  transition: all 400ms ease-in-out;
+}
+.launchpad.active {
+  transform: translateY(0px);
+  opacity: 1;
+}

@@ -42,9 +42,6 @@ article {
       }
       @media (min-width: $bp-tv) {
         background-image: url(../assets/images/pc-distant.png);
-        // height: 25em;
-        // min-height: 31em;
-        // margin-top: -5%;
       }
     }
   }
@@ -53,6 +50,9 @@ article {
 .intro {
   transform: translateY(-24%);
   transition: all 700ms ease-in-out;
+}
+.intro-text {
+  width: min(100%, 600px);
 }
 .intro.active {
   transform: translateY(0px);

@@ -778,6 +778,10 @@ article aside #about-image {
   transition: all 700ms ease-in-out;
 }
 
+.intro-text {
+  width: min(100%, 600px);
+}
+
 .intro.active {
   transform: translateY(0px);
   opacity: 1;
@@ -817,6 +821,8 @@ article aside #about-image {
 #products .grid-content .launchpad,
 #products .grid-content .bridge {
   margin: 4% auto;
+  width: min(100%, 700px);
+  transition: all 500ms ease-in-out;
   display: flex;
   border: 0.4px solid rgb(47, 192, 219);
   padding: 1.5em;
@@ -829,6 +835,7 @@ article aside #about-image {
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 7px;
+  background-color: #1f1f24;
 }
 @media (min-width: 720px) {
   #products .grid-content .marketplace,
@@ -848,62 +855,20 @@ article aside #about-image {
     margin: 1% auto;
   }
 }
-@media (min-width: 720px) {
-  #products .grid-content .marketplace,
-#products .grid-content .lending,
-#products .grid-content .game-guild,
-#products .grid-content .launchpad,
-#products .grid-content .bridge {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
-    justify-items: stretch;
-    align-items: center;
-    max-height: 50em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    line-height: 2;
-  }
+#products .grid-content .marketplace .description,
+#products .grid-content .lending .description,
+#products .grid-content .game-guild .description,
+#products .grid-content .launchpad .description,
+#products .grid-content .bridge .description {
+  height: 0;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
 }
-@media (min-width: 720px) {
-  #products .grid-content .lending,
-#products .grid-content .launchpad {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
-    justify-items: stretch;
-    align-items: center;
-    max-height: 50em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-#products .grid-content h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
-}
-#products .grid-content .marketplace {
-  background-color: #1f1f24;
-}
-#products .grid-content .marketplace h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
-}
-#products .grid-content .marketplace .img {
+#products .grid-content .marketplace .img,
+#products .grid-content .lending .img,
+#products .grid-content .game-guild .img,
+#products .grid-content .launchpad .img,
+#products .grid-content .bridge .img {
   background-image: url("../assets/images/marketplace.png");
   background-position: center center;
   background-size: contain;
@@ -913,11 +878,21 @@ article aside #about-image {
   padding: 15em;
 }
 @media (max-width: 340px) {
-  #products .grid-content .marketplace .img {
+  #products .grid-content .marketplace .img,
+#products .grid-content .lending .img,
+#products .grid-content .game-guild .img,
+#products .grid-content .launchpad .img,
+#products .grid-content .bridge .img {
     padding: 10em;
   }
 }
-#products .grid-content .marketplace .description {
+#products .grid-content .marketplace:hover .description,
+#products .grid-content .lending:hover .description,
+#products .grid-content .game-guild:hover .description,
+#products .grid-content .launchpad:hover .description,
+#products .grid-content .bridge:hover .description {
+  height: 100%;
+  opacity: 1;
   order: 1;
   text-align: justify;
   font-size: clamp(1.6rem, 1.2vw, 2.2rem);
@@ -925,20 +900,21 @@ article aside #about-image {
   font-family: "robotoregular";
 }
 @media (min-width: 720px) {
-  #products .grid-content .marketplace .description {
+  #products .grid-content .marketplace:hover .description,
+#products .grid-content .lending:hover .description,
+#products .grid-content .game-guild:hover .description,
+#products .grid-content .launchpad:hover .description,
+#products .grid-content .bridge:hover .description {
     text-align: left;
   }
 }
-#products .grid-content .lending {
-  background-color: #1f1f24;
-}
-#products .grid-content .lending h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
+#products .grid-content .marketplace:hover .description p,
+#products .grid-content .lending:hover .description p,
+#products .grid-content .game-guild:hover .description p,
+#products .grid-content .launchpad:hover .description p,
+#products .grid-content .bridge:hover .description p {
+  margin: 0 auto;
+  width: min(100%, 550px);
 }
 #products .grid-content .lending .img {
   background-image: url("../assets/images/lending.png");
@@ -954,34 +930,6 @@ article aside #about-image {
     padding: 10em;
   }
 }
-@media (min-width: 720px) {
-  #products .grid-content .lending .img {
-    order: 1;
-  }
-}
-#products .grid-content .lending .description {
-  order: 1;
-  text-align: justify;
-  font-size: clamp(1.6rem, 1.2vw, 2.2rem);
-  width: 100%;
-  font-family: "robotoregular";
-}
-@media (min-width: 720px) {
-  #products .grid-content .lending .description {
-    text-align: right;
-  }
-}
-#products .grid-content .game-guild {
-  background-color: #1f1f24;
-}
-#products .grid-content .game-guild h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
-}
 #products .grid-content .game-guild .img {
   background-image: url("../assets/images/game-guild.png");
   background-position: center center;
@@ -995,30 +943,6 @@ article aside #about-image {
   #products .grid-content .game-guild .img {
     padding: 10em;
   }
-}
-#products .grid-content .game-guild .description {
-  order: 1;
-  text-align: justify;
-  font-size: clamp(1.6rem, 1.2vw, 2.2rem);
-  width: 100%;
-  font-family: "robotoregular";
-}
-@media (min-width: 720px) {
-  #products .grid-content .game-guild .description {
-    text-align: left;
-  }
-}
-#products .grid-content .launchpad {
-  background-color: #1f1f24;
-  background-position: top center;
-}
-#products .grid-content .launchpad h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
 }
 #products .grid-content .launchpad .img {
   background-image: url("../assets/images/launchpad.png");
@@ -1034,34 +958,6 @@ article aside #about-image {
     padding: 10em;
   }
 }
-@media (min-width: 720px) {
-  #products .grid-content .launchpad .img {
-    order: 1;
-  }
-}
-#products .grid-content .launchpad .description {
-  order: 1;
-  text-align: justify;
-  font-size: clamp(1.6rem, 1.2vw, 2.2rem);
-  width: 100%;
-  font-family: "robotoregular";
-}
-@media (min-width: 720px) {
-  #products .grid-content .launchpad .description {
-    text-align: right;
-  }
-}
-#products .grid-content .bridge {
-  background-color: #1f1f24;
-}
-#products .grid-content .bridge h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(47, 192, 219);
-  font-size: clamp(2em, 2.5vw, 4em);
-  text-align: center;
-  font-family: "robotoblack";
-}
 #products .grid-content .bridge .img {
   background-image: url("../assets/images/bridge.png");
   background-position: center center;
@@ -1076,17 +972,13 @@ article aside #about-image {
     padding: 10em;
   }
 }
-#products .grid-content .bridge .description {
-  order: 1;
-  text-align: justify;
-  font-size: clamp(1.6rem, 1.2vw, 2.2rem);
-  width: 100%;
-  font-family: "robotoregular";
-}
-@media (min-width: 720px) {
-  #products .grid-content .bridge .description {
-    text-align: left;
-  }
+#products .grid-content h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(47, 192, 219);
+  font-size: clamp(2em, 2.5vw, 4em);
+  text-align: center;
+  font-family: "robotoblack";
 }
 
 .marketplace {
