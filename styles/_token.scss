@@ -16,6 +16,10 @@
     width: 100%;
     margin: 5% auto;
     display: flex;
+    background-color: black;
+    background-image: url("../assets/svg/star.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     @media (max-width: 373px) {
       height: 36em;
       position: relative;

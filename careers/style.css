@@ -185,7 +185,7 @@ nav{
 .career-page{
   min-height: 150vh;
   max-height: auto;
-  padding: 3%;
+  padding: 5%;
   width:100%;
   display:grid;
   gap:60px;
@@ -264,7 +264,7 @@ nav{
   height:100%;
   /* width:100%; */
 }
-/* From uiverse.io by @SanketSuryawanshi */
+
 .available-positions {
   --color: #ce4e05;
   position: relative;
