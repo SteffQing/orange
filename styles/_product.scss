@@ -86,6 +86,16 @@
         margin: 1% auto;
       }
       @include flexcontent();
+      .headContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        div {
+          position: absolute;
+          right: 0;
+        }
+      }
       .description {
         height: 0;
         opacity: 0;

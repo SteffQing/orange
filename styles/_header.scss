@@ -5,48 +5,34 @@ main {
   background-position: center center;
   header {
     margin: 0 3%;
-    height: fit-content;
+    height: 100vh;
     max-width: 100%;
     color: white;
     overflow: hidden;
-    padding-top: 10%;
     @media (min-width: $bp-tablet) {
       display: flex;
       justify-content: space-between;
-      .hero {
-        order: 1;
-        position: relative;
-        .hero-content {
-          max-width: 75%;
-          position: relative;
-          text-align: left;
-          top: 25%;
-        }
-      }
-      .hero_image {
-        width: 60%;
-        max-width: 70%;
-        order: 2;
-      }
-    }
-    @media (min-width: $bp-pc) {
-      @media (max-height: 700px) {
-        height: 100vh;
-      }
     }
     .hero {
-      width: 90%;
+      width: 100%;
       min-width: 45ch;
       margin: auto;
-      padding: 1em 0;
       text-align: center;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       h1 {
-        font-size: $h1;
+        font-size: $bigText;
         font-family: "robotobold";
         line-height: 1.3;
+        @media (max-width: $bp-phone) {
+          line-height: 1.1;
+        }
       }
       h2 {
-        font-size: $h2;
+        font-size: $mediumText;
         line-height: 1.5;
         font-family: "robotobold";
         .magic {
@@ -89,7 +75,7 @@ main {
         }
       }
       p {
-        font-size: $p2;
+        font-size: $smallText;
         color: white;
         font-family: "robotoregular";
         line-height: 1.32;
@@ -115,22 +101,28 @@ main {
         }
       }
     }
-    .hero_image {
-      background-color: transparent;
-      max-width: 100%;
-      height: 40rem;
-      max-height: 60%;
-      background-image: url(../assets/images/hero-image.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      @media (min-width: $bp-phone-1) {
-        max-height: 100%;
-      }
+  }
+}
+.arrowPointer {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 15px auto;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  cursor: pointer;
+  hr {
+    height: 35px;
+    width: 1px;
+    animation: jump 4s ease-in 4 forwards;
+    background-color: transparent;
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+      transform: translateY(5px);
     }
   }
 }
-
 @keyframes background-pan {
   from {
     background-position: 0% center;
