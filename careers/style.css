@@ -2,14 +2,18 @@
   padding: 0;
 }
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 0;
   overflow-x: hidden;
 }
-.stage h1 {
+.stage {
+  margin: 100px 0 0 0;
+  padding: 0 7vw;
+}
+.stage p {
   color: white;
-  margin: 100px 0 20px 7vw;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 nav {
   position: fixed;
@@ -23,6 +27,7 @@ nav {
   gap: 2%;
   grid-template-columns: repeat(auto-fit, minmax(auto, 350px));
   justify-content: center;
+  padding: 0 7vw;
 }
 .available-positions {
   padding: 0.5rem 1rem;
@@ -32,6 +37,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
+  margin: 0.5rem 0;
   border: 1px solid #f5f5f5;
   align-items: center;
   text-align: center;
@@ -39,7 +45,7 @@ nav {
 }
 .available-positions:hover {
   background-color: #f5f5f5;
-  transform: scale(1.03);
+  transform: translateY(-3px);
   color: #000;
   cursor: pointer;
 }

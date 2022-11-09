@@ -831,24 +831,6 @@ article aside #about-image {
     margin: 1% auto;
   }
 }
-#products .grid-content .marketplace .headContent,
-#products .grid-content .lending .headContent,
-#products .grid-content .game-guild .headContent,
-#products .grid-content .launchpad .headContent,
-#products .grid-content .bridge .headContent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-}
-#products .grid-content .marketplace .headContent div,
-#products .grid-content .lending .headContent div,
-#products .grid-content .game-guild .headContent div,
-#products .grid-content .launchpad .headContent div,
-#products .grid-content .bridge .headContent div {
-  position: absolute;
-  right: 0;
-}
 #products .grid-content .marketplace .description,
 #products .grid-content .lending .description,
 #products .grid-content .game-guild .description,
@@ -857,28 +839,55 @@ article aside #about-image {
   height: 0;
   opacity: 0;
   transition: all 500ms ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
-#products .grid-content .marketplace .img,
-#products .grid-content .lending .img,
-#products .grid-content .game-guild .img,
-#products .grid-content .launchpad .img,
-#products .grid-content .bridge .img {
-  background-image: url("../assets/images/marketplace.png");
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
+#products .grid-content .marketplace .description a,
+#products .grid-content .lending .description a,
+#products .grid-content .game-guild .description a,
+#products .grid-content .launchpad .description a,
+#products .grid-content .bridge .description a {
+  border: 1px solid rgb(47, 192, 219);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(47, 192, 219);
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 500ms ease-in-out;
 }
-@media (max-width: 340px) {
-  #products .grid-content .marketplace .img,
-#products .grid-content .lending .img,
-#products .grid-content .game-guild .img,
-#products .grid-content .launchpad .img,
-#products .grid-content .bridge .img {
-    padding: 10em;
-  }
+#products .grid-content .marketplace .description a img,
+#products .grid-content .marketplace .description a span,
+#products .grid-content .lending .description a img,
+#products .grid-content .lending .description a span,
+#products .grid-content .game-guild .description a img,
+#products .grid-content .game-guild .description a span,
+#products .grid-content .launchpad .description a img,
+#products .grid-content .launchpad .description a span,
+#products .grid-content .bridge .description a img,
+#products .grid-content .bridge .description a span {
+  transition: all 500ms ease-in-out;
+}
+#products .grid-content .marketplace .description a:hover img,
+#products .grid-content .lending .description a:hover img,
+#products .grid-content .game-guild .description a:hover img,
+#products .grid-content .launchpad .description a:hover img,
+#products .grid-content .bridge .description a:hover img {
+  transform: translateX(5px);
+}
+#products .grid-content .marketplace .description a:hover span,
+#products .grid-content .lending .description a:hover span,
+#products .grid-content .game-guild .description a:hover span,
+#products .grid-content .launchpad .description a:hover span,
+#products .grid-content .bridge .description a:hover span {
+  transform: scale(1.01);
 }
 #products .grid-content .marketplace:hover .description,
 #products .grid-content .lending:hover .description,
@@ -909,62 +918,6 @@ article aside #about-image {
 #products .grid-content .bridge:hover .description p {
   margin: 0 auto;
   width: min(100%, 550px);
-}
-#products .grid-content .lending .img {
-  background-image: url("../assets/images/lending.png");
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
-}
-@media (max-width: 340px) {
-  #products .grid-content .lending .img {
-    padding: 10em;
-  }
-}
-#products .grid-content .game-guild .img {
-  background-image: url("../assets/images/game-guild.png");
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
-}
-@media (max-width: 340px) {
-  #products .grid-content .game-guild .img {
-    padding: 10em;
-  }
-}
-#products .grid-content .launchpad .img {
-  background-image: url("../assets/images/launchpad.png");
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
-}
-@media (max-width: 340px) {
-  #products .grid-content .launchpad .img {
-    padding: 10em;
-  }
-}
-#products .grid-content .bridge .img {
-  background-image: url("../assets/images/bridge.png");
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
-}
-@media (max-width: 340px) {
-  #products .grid-content .bridge .img {
-    padding: 10em;
-  }
 }
 #products .grid-content h3 {
   text-transform: uppercase;

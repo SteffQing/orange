@@ -16,15 +16,6 @@
   border-radius: 7px;
   background-color: #1f1f24;
 }
-@mixin img($image) {
-  background-image: url($image);
-  background-position: center center;
-  background-size: contain;
-  width: 100%;
-  order: 2;
-  background-repeat: no-repeat;
-  padding: 15em;
-}
 @mixin h3 {
   text-transform: uppercase;
   font-weight: 400;
@@ -86,24 +77,42 @@
         margin: 1% auto;
       }
       @include flexcontent();
-      .headContent {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        div {
-          position: absolute;
-          right: 0;
-        }
-      }
+
       .description {
         height: 0;
         opacity: 0;
         transition: all 500ms ease-in-out;
-      }
-      .img {
-        @include img("../assets/images/marketplace.png");
-        @include media();
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        a {
+          border: 1px solid rgb(47, 192, 219);
+          padding: 5px;
+          border-radius: 5px;
+          color: rgb(47, 192, 219);
+          text-decoration: none;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          transition: all 500ms ease-in-out;
+          img,
+          span {
+            transition: all 500ms ease-in-out;
+          }
+          &:hover {
+            img {
+              transform: translateX(5px);
+            }
+            span {
+              transform: scale(1.01);
+            }
+          }
+        }
       }
       &:hover {
         .description {
@@ -118,30 +127,6 @@
             width: min(100%, 550px);
           }
         }
-      }
-    }
-    .lending {
-      .img {
-        @include img("../assets/images/lending.png");
-        @include media();
-      }
-    }
-    .game-guild {
-      .img {
-        @include img("../assets/images/game-guild.png");
-        @include media();
-      }
-    }
-    .launchpad {
-      .img {
-        @include img("../assets/images/launchpad.png");
-        @include media();
-      }
-    }
-    .bridge {
-      .img {
-        @include img("../assets/images/bridge.png");
-        @include media();
       }
     }
     h3 {
